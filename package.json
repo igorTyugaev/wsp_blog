@@ -1,7 +1,7 @@
 {
-  "name": "bathe",
-  "version": "1.1.1",
-  "description": "The simplest WordPress starter theme including full setup for Sass, PostCSS, Autoprefixer, stylelint, Webpack, ESLint, imagemin, Browsersync, etc.",
+  "name": "wsp_blog",
+  "version": "0.0.1",
+  "description": "World Sci Publ - блог",
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -9,7 +9,7 @@
   ],
   "config": {
     "browsersync": {
-      "proxy": "localhost:8888",
+      "proxy": "localhost/wordpress/",
       "port": 3000
     },
     "image": {
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wp-bathe/bathe.git"
+    "url": "https://github.com/igorTyugaev/wsp_blog.git"
   },
   "keywords": [
     "WordPress",
@@ -56,12 +56,12 @@
     "stylelint",
     "ESLint"
   ],
-  "author": "Kite",
+  "author": "ITyugaev",
   "license": "GPL-2.0+",
   "bugs": {
     "url": "https://github.com/wp-bathe/bathe/issues"
   },
-  "homepage": "https://github.com/wp-bathe/bathe",
+  "homepage": "worldscipubl.com",
   "engines": {
     "node": ">= 12.0.0",
     "npm": ">= 6.9.0"
