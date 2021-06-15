@@ -3,3 +3,159 @@
 body {
 	font-family: sans-serif;
 }
+
+.text {
+	font-family: $fontMain;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 16px;
+
+	&_style {
+		&_italic {
+			font-style: italic;
+		}
+
+		&_normal {
+			font-style: normal;
+		}
+	}
+
+	&_weight {
+		&_normal {
+			font-weight: normal;
+		}
+
+		&_bold {
+			font-weight: bold;
+		}
+	}
+
+	&_color {
+		&_black {
+			color: $black;
+		}
+
+		&_white {
+			color: $white;
+		}
+
+		&_blue {
+			color: $blue;
+		}
+
+		&_gray-blue {
+			color: $blue;
+			opacity: 0.3;
+		}
+
+		&_green {
+			color: $green;
+		}
+
+		&_gray {
+			color: $gray;
+		}
+	}
+
+	&_type {
+		&_link {
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.title {
+	font-family: $fontMain;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 16px;
+
+	&_style {
+		&_italic {
+			font-style: italic;
+		}
+
+		&_normal {
+			font-style: normal;
+		}
+	}
+
+
+	&_color {
+		&_black {
+			color: $black;
+		}
+
+		&_white {
+			color: $white;
+		}
+
+		&_blue {
+			color: $blue;
+		}
+
+		&_gray-blue {
+			color: $blue;
+			opacity: 0.3;
+		}
+
+		&_green {
+			color: $green;
+		}
+
+		&_gray {
+			color: $gray;
+		}
+	}
+}
+
+.subtitle {
+	font-family: $fontMain;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 16px;
+
+	&_style {
+		&_italic {
+			font-style: italic;
+		}
+
+		&_normal {
+			font-style: normal;
+		}
+	}
+
+	&_color {
+		&_black {
+			color: $black;
+		}
+
+		&_white {
+			color: $white;
+		}
+
+		&_blue {
+			color: $blue;
+		}
+
+		&_gray-blue {
+			color: $blue;
+			opacity: 0.3;
+		}
+
+		&_green {
+			color: $green;
+		}
+
+		&_gray {
+			color: $gray;
+		}
+	}
+}
