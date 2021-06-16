@@ -1,5 +1,25 @@
 @use '../global' as *;
 
 .footer {
-	border-top: 1px solid $light-gray;
+	align-items: center;
+	background: #f1f2f3;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+
+	&__index {
+		bottom: 0;
+		left: 0;
+		margin-left: 20%;
+		min-height: 20px;
+		position: fixed;
+		width: 80%;
+	}
+}
+
+.copyright {
+	@extend %text;
+	color: $black;
+	padding: 5px;
 }

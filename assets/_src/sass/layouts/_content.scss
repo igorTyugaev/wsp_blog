@@ -1,0 +1,17 @@
+@use '../global' as *;
+
+.content {
+	background: $gray;
+	left: 0;
+	margin-left: 20%;
+	min-height: 100vh;
+	overflow-x: hidden;
+	padding-top: 58px;
+	position: relative;
+	top: 0;
+	width: 80%;
+
+	&__inner {
+		padding: 12px;
+	}
+}

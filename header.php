@@ -65,4 +65,27 @@
 	</div>
 </header>
 
-<main id="primary" class="site-main" role="main">
+<nav class="navbar">
+	<div class="navbar__inner">
+		<div class="navbar__content">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'primary',
+					'menu_class' => 'nav-menu',
+					'container' => '',
+					'add_li_class' => 'nav-menu__item-container',
+					'link_class' => 'nav-menu__item-link',
+					'items_wrap' => '<ul class="%2$s" id="primary-menu-list">%3$s</ul>',
+					'fallback_cb' => false,
+				)
+			); ?>
+		</div>
+		<img class="navbar__img-bg character"
+			 src="<?php echo get_template_directory_uri() ?>/assets/images/characters/client.svg"
+			 alt="characters: client">
+	</div>
+</nav>
+<?php //get_sidebar(); ?>
+<main id="primary" class="content" role="main">
+

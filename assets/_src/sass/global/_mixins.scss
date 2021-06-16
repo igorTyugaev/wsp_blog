@@ -1,1 +1,10 @@
 @use 'variables' as *;
+
+
+%text {
+	font-family: $fontMain;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 16px;
+}
