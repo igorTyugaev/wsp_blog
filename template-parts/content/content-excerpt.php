@@ -11,7 +11,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="articles__item article-preview">
+<article id="post-<?php the_ID(); ?>" class="articles__item">
 	<div class="article-preview">
 		<div class="article-preview__container">
 
@@ -48,10 +48,5 @@
 			</h5>
 		</div>
 	</div>
-
-
-	<!--	<div class="entry-content">-->
-	<!--		--><?php //get_template_part('template-parts/excerpt/excerpt', get_post_format()); ?>
-	<!--	</div>-->
 </article>
 

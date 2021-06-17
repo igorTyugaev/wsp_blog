@@ -1,44 +1,135 @@
-<?php
-/**
- * Template part for displaying posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
- */
+<div class="page">
+	<div class="page__inner">
+		<div class="page__article">
+			<article class="article" id="post-<?php the_ID(); ?>">
+				<div class="article__header">
+					Header page
+				</div>
+				<div class="article__content">
+					<?php the_title('<h1 class="article__title title title_color_black">', '</h1>'); ?>
+					<?php the_content(); ?>
+				</div>
+				<img class="article__bg-logo"
+					 src="<?php echo get_template_directory_uri() ?>/assets/images/logos/flazhek.png"
+					 alt="bg logo">
+			</article>
+		</div>
 
-?>
+		<div class="page__similar">
+			<div class="similar">
+				<div class="similar__item">
+					<div class="article-preview">
+						<div class="article-preview__container">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<a class="article-preview__picture picture-preview" href="">
+								<img class="picture-preview__img"
+									 src="https://fakeimg.pl/360x360"
+									 alt="post picture">
+							</a>
 
-	<header class="entry-header alignwide">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php twenty_twenty_one_post_thumbnail(); ?>
-	</header><!-- .entry-header -->
+							<a href="" class="article-preview__label label">
+								Сервис World Sci Publ
+							</a>
 
-	<div class="entry-content">
-		<?php
-		the_content();
+							<h2 class="article-preview__title">
+								<a class="article-preview__title-link text text_color_black text_type_link"
+								   href="">
+									Почему давать гарантию на успешную публикацию
+									не может давать ни одна компания
+								</a>
+							</h2>
 
-		wp_link_pages(
-			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
-				'after'    => '</nav>',
-				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+							<h5 class="article-preview__timestamp">
+								11 мая 18:55
+							</h5>
+						</div>
+					</div>
+				</div>
+				<div class="similar__item">
+					<div class="article-preview">
+						<div class="article-preview__container">
 
-	<footer class="entry-footer default-max-width">
-		<?php twenty_twenty_one_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
+							<a class="article-preview__picture picture-preview" href="">
+								<img class="picture-preview__img"
+									 src="https://fakeimg.pl/360x360"
+									 alt="post picture">
+							</a>
 
-	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
-	<?php endif; ?>
+							<a href="" class="article-preview__label label">
+								Сервис World Sci Publ
+							</a>
 
-</article><!-- #post-<?php the_ID(); ?> -->
+							<h2 class="article-preview__title">
+								<a class="article-preview__title-link text text_color_black text_type_link"
+								   href="">
+									Почему давать гарантию на успешную публикацию
+									не может давать ни одна компания
+								</a>
+							</h2>
+
+							<h5 class="article-preview__timestamp">
+								11 мая 18:55
+							</h5>
+						</div>
+					</div>
+				</div>
+				<div class="similar__item">
+					<div class="article-preview">
+						<div class="article-preview__container">
+
+							<a class="article-preview__picture picture-preview" href="">
+								<img class="picture-preview__img"
+									 src="https://fakeimg.pl/360x360"
+									 alt="post picture">
+							</a>
+
+							<a href="" class="article-preview__label label">
+								Сервис World Sci Publ
+							</a>
+
+							<h2 class="article-preview__title">
+								<a class="article-preview__title-link text text_color_black text_type_link"
+								   href="">
+									Почему давать гарантию на успешную публикацию
+									не может давать ни одна компания
+								</a>
+							</h2>
+
+							<h5 class="article-preview__timestamp">
+								11 мая 18:55
+							</h5>
+						</div>
+					</div>
+				</div>
+				<div class="similar__item">
+					<div class="article-preview">
+						<div class="article-preview__container">
+
+							<a class="article-preview__picture picture-preview" href="">
+								<img class="picture-preview__img"
+									 src="https://fakeimg.pl/360x360"
+									 alt="post picture">
+							</a>
+
+							<a href="" class="article-preview__label label">
+								Сервис World Sci Publ
+							</a>
+
+							<h2 class="article-preview__title">
+								<a class="article-preview__title-link text text_color_black text_type_link"
+								   href="">
+									Почему давать гарантию на успешную публикацию
+									не может давать ни одна компания
+								</a>
+							</h2>
+
+							<h5 class="article-preview__timestamp">
+								11 мая 18:55
+							</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

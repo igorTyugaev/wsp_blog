@@ -1,0 +1,41 @@
+@use '../global' as *;
+
+.page {
+	height: 100%;
+	width: 100%;
+
+	&__inner {
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__article {
+		min-height: 100%;
+		overflow-y: scroll;
+		padding: 12px;
+		width: 70%;
+	}
+
+	&__similar {
+		min-height: 100%;
+		overflow-y: scroll;
+		padding: 12px 24px 12px 12px;
+		width: 30%;
+	}
+}
+
+.similar {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	&__item {
+		& + & {
+			padding-top: 23px;
+		}
+	}
+}

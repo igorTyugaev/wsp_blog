@@ -1,5 +1,12 @@
-<?php get_header(); ?>
+<?php
 
-<?php get_template_part( 'template-parts/loop', 'single' ); ?>
+get_header();
 
-<?php get_footer();
+/* Start the Loop */
+while (have_posts()) :
+	the_post();
+
+	get_template_part('template-parts/content/content-single');
+endwhile; // End of the loop.
+
+get_footer();
