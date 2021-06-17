@@ -168,6 +168,12 @@ body {
 		display: block;
 		height: 100%;
 		object-fit: cover;
+		object-position: center top;
+		transition: transform 0.18s ease-in-out;
 		width: 100%;
+
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 }

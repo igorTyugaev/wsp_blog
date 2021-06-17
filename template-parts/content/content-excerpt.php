@@ -15,23 +15,33 @@
 	<div class="article-preview">
 		<div class="article-preview__container">
 
-			<a class="article-preview__picture picture-preview" href="">
-				<img class="picture-preview__img" src="https://fakeimg.pl/360x360"
-					 alt="post picture">
+			<?php if (has_post_thumbnail()) { ?>
+				<a class="article-preview__picture picture-preview"
+				   href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<?php the_post_thumbnail('medium', array(
+						'class' => "picture-preview__img",
+						'alt' => trim(strip_tags(get_post_meta(get_post_thumbnail_id(),
+							'_wp_attachment_image_alt', TRUE))),
+					));
+					?>
+				</a>
+			<?php } else { ?>
+				<a class="article-preview__picture picture-preview"
+				   href="<?php the_permalink(); ?>">
+					<img class="picture-preview__img" src="https://fakeimg.pl/360x360"
+						 alt="post picture">
+				</a>
+			<?php } ?>
+
+			<a href="" class="article-preview__label label">
+				Сервис World Sci Publ
 			</a>
 
-
-			<h5 class="article-preview__label label">
-				<a href="" class="label__link">
-					Сервис World Sci Publ
-				</a>
-			</h5>
-
-
-			<p class="article-preview__description">
-				Почему давать гарантию на успешную публикацию
-				не может давать ни одна компания
-			</p>
+			<?php
+			the_title(sprintf('<h2 class="article-preview__title">
+<a class="article-preview__title-link text text_color_black text_type_link" href="%s">',
+				esc_url(get_permalink())), '</a></h2>');
+			?>
 
 			<h5 class="article-preview__timestamp">
 				11 мая 18:55

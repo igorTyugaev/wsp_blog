@@ -1,22 +1,26 @@
 @use '../global' as *;
 
 .articles {
+	height: 100%;
+	width: 100%;
+
 	&__title {
 		margin-bottom: 12px;
 	}
 
 	&__container {
+		align-content: flex-start;
 		display: flex;
 		flex-wrap: wrap;
 		height: 100%;
-		margin: -13.5px -22.5px;
+		justify-content: space-between;
+		margin: -13.5px 0;
 		width: 100%;
 	}
 
 	&__item {
-		height: 203px;
-		margin: 13.5px 22.5px;
-		width: 33.33%;
+		margin: 13.5px 0;
+		width: calc((100% - 45px) / 3);
 	}
 }
 
@@ -37,8 +41,12 @@
 		margin-top: 12px;
 	}
 
-	&__description {
+	&__title {
 		margin-top: 6px;
+	}
+
+	&__title-link {
+		display: block;
 	}
 
 	&__timestamp {
@@ -49,12 +57,64 @@
 }
 
 .label {
+	@extend %text;
 	background-color: $label-bg-gray;
 	border-radius: 15px;
+	color: $timestamp-text-gray;
+	display: block;
 	padding: 2px 12px;
 
-	&__link {
-		@extend %text;
-		color: $timestamp-text-gray;
+	&:hover {
+		background-color: $label-bg-gray-hover;
+		color: $timestamp-text-gray-hover;
+	}
+}
+
+
+@media screen and (max-width: 1175px) {
+	.articles {
+		&__title {
+
+		}
+
+		&__container {
+
+		}
+
+		&__item {
+			width: calc((100% - 45px) / 2);
+		}
+	}
+}
+
+@media screen and (max-width: 845px) {
+	.articles {
+		&__title {
+
+		}
+
+		&__container {
+
+		}
+
+		&__item {
+			width: calc((100% - 45px) / 1);
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.articles {
+		&__title {
+
+		}
+
+		&__container {
+
+		}
+
+		&__item {
+
+		}
 	}
 }

@@ -2,16 +2,19 @@
 
 .content {
 	background: $gray;
-	left: 0;
-	margin-left: 20%;
+	height: calc(100vh - 58px);
+	max-width: calc(100vw - 283px);
 	min-height: 100vh;
 	overflow-x: hidden;
 	padding-top: 58px;
-	position: relative;
+	position: fixed;
+	right: 0;
 	top: 0;
 	width: 80%;
 
 	&__inner {
-		padding: 12px;
+		height: 100%;
+		padding: 12px 24px 12px 12px;
+		width: 100%;
 	}
 }
