@@ -1,0 +1,29 @@
+@use '../global' as *;
+
+.comments {
+	&__input {
+		@extend %text;
+		background: #fff;
+		border: 1px solid #000;
+		border-radius: 4px;
+		color: $black;
+		margin-top: 12px;
+		opacity: 1;
+		padding: 8px 12px;
+
+		&::placeholder {
+			opacity: 0.3;
+		}
+	}
+
+	&__submit {
+		@extend %text;
+		background: #fff;
+		border: 1px solid #000;
+		border-radius: 4px;
+		color: $black;
+		cursor: pointer;
+		margin-top: 12px;
+		padding: 8px 30px;
+	}
+}
