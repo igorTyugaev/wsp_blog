@@ -51,75 +51,49 @@ $wsb_blog_comment_count = get_comments_number();
 
 	?>
 
-	<?php
-	comment_form(
-		array(
-			'logged_in_as' => null,
-			'title_reply_before' => '<h2 id="reply-title" class="subtitle subtitle_color_black">',
-			'title_reply_after' => '</h2>',
-			'comment_notes_before' => '<p class="text text_color_black">
+	<div class="comments__form">
+		<?php
+		comment_form(
+			array(
+				'logged_in_as' => null,
+				'title_reply_before' => '<h2 id="reply-title" class="subtitle subtitle_color_black">',
+				'title_reply_after' => '</h2>',
+				'comment_notes_before' => '<p class="text text_color_black">
 Когда другой человек ответит на ваш комментарий – на указанную почту придет письмо.
 </p>',
-			'comment_field' => '<p class="comment-form-comment">
+				'comment_field' => '<p class="comment-form-comment">
 <textarea id="comment" name="comment" class="comments__input" cols="45" rows="8" aria-required="true" placeholder="Ваш комментарий"></textarea>
 </p>',
-			'label_submit' => 'Оставить комментарий',
-			'submit_button' => '<input name="%1$s" type="submit" id="%2$s" class="comments__submit" value="%4$s" />',
-		)
-	);
-	?>
-
-	<?php
-	if (have_comments()) : ; ?>
-		<h2 class="comments-title">
-			<?php if ('1' === $wsb_blog_comment_count) : ?>
-				<?php esc_html_e('1 comment', 'wsb_blog'); ?>
-			<?php else : ?>
-				<?php
-				printf(
-				/* translators: %s: Comment count number. */
-					esc_html(_nx('%s comment', '%s comments', $wsb_blog_comment_count, 'Comments title', 'wsb_blog')),
-					esc_html(number_format_i18n($wsb_blog_comment_count))
-				);
-				?>
-			<?php endif; ?>
-		</h2><!-- .comments-title -->
-
-		<ol class="comment-list">
-			<?php
-			wp_list_comments(
-				array(
-					'avatar_size' => 60,
-					'style' => 'ol',
-					'short_ping' => true,
-				)
-			);
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php
-		the_comments_pagination(
-			array(
-				'before_page_number' => esc_html__('Page', 'wsb_blog') . ' ',
-				'mid_size' => 0,
-				'prev_text' => sprintf(
-					'%s <span class="nav-prev-text">%s</span>',
-					is_rtl() ? wsb_blog_get_icon_svg('ui', 'arrow_right') : wsb_blog_get_icon_svg('ui', 'arrow_left'),
-					esc_html__('Older comments', 'wsb_blog')
-				),
-				'next_text' => sprintf(
-					'<span class="nav-next-text">%s</span> %s',
-					esc_html__('Newer comments', 'wsb_blog'),
-					is_rtl() ? wsb_blog_get_icon_svg('ui', 'arrow_left') : wsb_blog_get_icon_svg('ui', 'arrow_right')
-				),
+				'label_submit' => 'Оставить комментарий',
+				'submit_button' => '<input name="%1$s" type="submit" id="%2$s" class="comments__submit" value="%4$s" />',
 			)
 		);
 		?>
+	</div>
 
-		<?php if (!comments_open()) : ?>
-			<p class="no-comments"><?php esc_html_e('Comments are closed.', 'wsb_blog'); ?></p>
+	<div class="comments__list comments-list">
+		<?php
+		if (have_comments()) : ; ?>
+			<h2 class="comments-list__title text text_color_black
+			text_weight_bold">Комментарии:</h2>
+
+			<ol class="comments-list__content">
+				<?php
+				wp_list_comments(
+					array(
+						'avatar_size' => 60,
+						'style' => 'ol',
+						'short_ping' => true,
+					)
+				);
+				?>
+			</ol>
+
+			<?php get_the_comments_pagination() ?>
+
+			<?php if (!comments_open()) : ?>
+				<p class="no-comments"><?php esc_html_e('Comments are closed.', 'wsb_blog'); ?></p>
+			<?php endif; ?>
 		<?php endif; ?>
-	<?php endif; ?>
-
-
-</div><!-- #comments -->
+	</div>
+</div>
