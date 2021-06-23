@@ -1,3 +1,8 @@
+/*
+Single Post Template: single-custom-tamplate-for-posts
+Description: This part is optional, but helpful for describing the Post Template
+*/
+
 <?php
 
 get_header();

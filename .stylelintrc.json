@@ -1,5 +1,7 @@
 {
-  "extends": ["stylelint-config-sass-guidelines"],
+  "extends": [
+    "stylelint-config-sass-guidelines"
+  ],
   "rules": {
     "indentation": "tab",
     "block-no-empty": null,
@@ -8,6 +10,5 @@
     "scss/dollar-variable-pattern": "",
     "scss/at-mixin-pattern": "",
     "max-nesting-depth": 4
-
   }
 }

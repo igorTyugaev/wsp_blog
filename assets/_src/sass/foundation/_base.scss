@@ -155,6 +155,51 @@ body {
 	}
 }
 
+.pre-title {
+	font-family: $fontMain;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 21px;
+
+	&_style {
+		&_italic {
+			font-style: italic;
+		}
+
+		&_normal {
+			font-style: normal;
+		}
+	}
+
+	&_color {
+		&_black {
+			color: $black;
+		}
+
+		&_white {
+			color: $white;
+		}
+
+		&_blue {
+			color: $blue;
+		}
+
+		&_gray-blue {
+			color: $blue;
+			opacity: 0.3;
+		}
+
+		&_green {
+			color: $green;
+		}
+
+		&_gray {
+			color: $gray;
+		}
+	}
+}
+
 .picture-preview {
 	background-color: #c4c4c4;
 	border-radius: 9px;

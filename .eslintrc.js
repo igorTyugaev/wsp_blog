@@ -20,8 +20,9 @@ module.exports = {
     'no-invalid-this': 'off',
     'no-var': 'warn',
     'require-jsdoc': 'off',
+    'max-len': ['error', {'code': 120}],
   },
   'parserOptions': {
     'sourceType': 'module',
-  }
-}
+  },
+};
