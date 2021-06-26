@@ -110,67 +110,6 @@ add_action('wp_enqueue_scripts', function () {
 	}
 });
 
-function true_breadcrumbs()
-{
-	// получаем номер текущей страницы
-	$page_num = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	$separator = ' / '; //  разделяем обычным слэшем, но можете чем угодно другим
-	$class_style_link = 'text text_type_link text_color_gray-blue';
-
-
-	// если главная страница сайта
-	if (is_front_page()) {
-		if ($page_num > 1) {
-			echo '<li class="breadcrumbs__item">';
-			sprintf('<a class="%s" href="%s">', $class_style_link, site_url());
-			echo '/ Все статьи</a>' . $separator . $page_num . '-я страница';
-			echo '</li>';
-		} else {
-			echo '<a class="' . $class_style_link . '" href="' . site_url() . '">';
-			echo '/ Все статьи</a>';
-			echo '</li>';
-		}
-	} else { // не главная
-		echo '<li class="bread-crumbs__item">';
-		sprintf('<a class="%s" href="%s">', $class_style_link, site_url());
-		echo '/ Все статьи</a>' . $separator;
-		echo '</li>';
-
-		if (is_single()) { // записи
-			echo '<li class="bread-crumbs__item">';
-			the_category(', ');
-			echo '</li>';
-			echo $separator;
-			the_title();
-		} elseif (is_page()) { // страницы WordPress
-			the_title();
-		} elseif (is_category()) {
-			single_cat_title();
-		} elseif (is_tag()) {
-			single_tag_title();
-		} elseif (is_day()) { // архивы (по дням)
-			echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $separator;
-			echo '<a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time('F') . '</a>' . $separator;
-			echo get_the_time('d');
-		} elseif (is_month()) { // архивы (по месяцам)
-			echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $separator;
-			echo get_the_time('F');
-		} elseif (is_year()) { // архивы (по годам)
-			echo get_the_time('Y');
-		} elseif (is_author()) { // архивы по авторам
-			global $author;
-			$userdata = get_userdata($author);
-			echo 'Опубликовал(а) ' . $userdata->display_name;
-		} elseif (is_404()) { // если страницы не существует
-			echo 'Ошибка 404';
-		}
-
-		if ($page_num > 1) { // номер текущей страницы
-			echo ' (' . $page_num . '-я страница)';
-		}
-	}
-}
-
 function wsp_breadcrumbs()
 {
 	/* === ОПЦИИ === */

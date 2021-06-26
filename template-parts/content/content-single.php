@@ -5,6 +5,7 @@
 				<div class="article__header">
 					Header page
 				</div>
+
 				<div class="article__content">
 					<?php the_title('<h1 class="article__title title title_color_black">', '</h1>'); ?>
 					<?php the_content(); ?>
