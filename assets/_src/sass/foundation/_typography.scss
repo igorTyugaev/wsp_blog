@@ -1,0 +1,201 @@
+@use '../global' as *;
+
+.text {
+	@extend %text;
+
+	&_style {
+		&_italic {
+			font-style: italic;
+		}
+
+		&_normal {
+			font-style: normal;
+		}
+	}
+
+	&_weight {
+		&_normal {
+			font-weight: normal;
+		}
+
+		&_bold {
+			font-weight: bold;
+		}
+	}
+
+	&_color {
+		&_black {
+			color: $black;
+		}
+
+		&_white {
+			color: $white;
+		}
+
+		&_blue {
+			color: $blue;
+		}
+
+		&_gray-blue {
+			color: $blue;
+			opacity: 0.3;
+		}
+
+		&_green {
+			color: $green;
+		}
+
+		&_gray {
+			color: $gray;
+		}
+
+		&_deep-gray {
+			color: $label-text-gray;
+		}
+	}
+
+	&_type {
+		&_link {
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.title {
+	font-family: $fontMain;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 41px;
+
+	&_style {
+		&_italic {
+			font-style: italic;
+		}
+
+		&_normal {
+			font-style: normal;
+		}
+	}
+
+	&_color {
+		&_black {
+			color: $black;
+		}
+
+		&_white {
+			color: $white;
+		}
+
+		&_blue {
+			color: $blue;
+		}
+
+		&_gray-blue {
+			color: $blue;
+			opacity: 0.3;
+		}
+
+		&_green {
+			color: $green;
+		}
+
+		&_gray {
+			color: $gray;
+		}
+	}
+}
+
+.subtitle {
+	font-family: $fontMain;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 28px;
+
+	&_style {
+		&_italic {
+			font-style: italic;
+		}
+
+		&_normal {
+			font-style: normal;
+		}
+	}
+
+	&_color {
+		&_black {
+			color: $black;
+		}
+
+		&_white {
+			color: $white;
+		}
+
+		&_blue {
+			color: $blue;
+		}
+
+		&_gray-blue {
+			color: $blue;
+			opacity: 0.3;
+		}
+
+		&_green {
+			color: $green;
+		}
+
+		&_gray {
+			color: $gray;
+		}
+	}
+}
+
+.pre-title {
+	font-family: $fontMain;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 21px;
+
+	&_style {
+		&_italic {
+			font-style: italic;
+		}
+
+		&_normal {
+			font-style: normal;
+		}
+	}
+
+	&_color {
+		&_black {
+			color: $black;
+		}
+
+		&_white {
+			color: $white;
+		}
+
+		&_blue {
+			color: $blue;
+		}
+
+		&_gray-blue {
+			color: $blue;
+			opacity: 0.3;
+		}
+
+		&_green {
+			color: $green;
+		}
+
+		&_gray {
+			color: $gray;
+		}
+	}
+}

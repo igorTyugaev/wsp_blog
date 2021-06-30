@@ -56,20 +56,6 @@
 	}
 }
 
-.label {
-	@extend %text;
-	background-color: $label-bg-gray;
-	border-radius: 15px;
-	color: $timestamp-text-gray;
-	display: block;
-	padding: 2px 12px;
-
-	&:hover {
-		background-color: $label-bg-gray-hover;
-		color: $timestamp-text-gray-hover;
-	}
-}
-
 @media screen and (max-width: 1175px) {
 	.articles {
 		&__title {

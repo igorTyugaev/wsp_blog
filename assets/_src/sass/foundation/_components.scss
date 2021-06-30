@@ -1,0 +1,260 @@
+@use '../global' as *;
+
+.picture-preview {
+	background-color: #c4c4c4;
+	border-radius: 9px;
+	display: block;
+	height: 203px;
+	overflow: hidden;
+	width: 100%;
+
+	&__img {
+		display: block;
+		height: 100%;
+		object-fit: cover;
+		object-position: center top;
+		transition: transform 0.18s ease-in-out;
+		width: 100%;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.label {
+	@extend %text;
+	background-color: $label-bg-gray;
+	border-radius: 15px;
+	color: $timestamp-text-gray;
+	display: inline-block;
+	padding: 2px 12px;
+
+	&:hover {
+		background-color: $label-bg-gray-hover;
+		color: $timestamp-text-gray-hover;
+	}
+
+	&_align {
+		&_center {
+			text-align: center;
+		}
+	}
+}
+
+.tag {
+	@extend %text;
+	color: $timestamp-text-gray;
+	display: inline-block;
+	//padding: 2px 12px;
+
+	&:hover {
+		color: $timestamp-text-gray-hover;
+	}
+
+	&_align {
+		&_center {
+			text-align: center;
+		}
+	}
+}
+
+.meta-option {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+
+	&__figure {
+		height: 12px;
+		width: 12px;
+	}
+
+	&__img {
+		display: block;
+		height: 100%;
+		min-width: 100%;
+		object-position: center;
+		width: 100%;
+	}
+
+	&__txt {
+		margin-left: 0.36em;
+	}
+}
+
+.button {
+	@extend %text;
+	align-items: center;
+	background-color: $gray;
+	border-radius: 3px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 8px;
+
+	&_type {
+		&_main {
+			background: $white;
+			border: 1px solid $black;
+			border-radius: 4px;
+			color: $black;
+			padding: 8px 30px;
+		}
+	}
+
+	&:hover {
+		background-color: $label-bg-gray-hover;
+		color: $timestamp-text-gray-hover;
+	}
+
+	&__img {
+		display: block;
+		height: 18px;
+		object-position: center;
+		width: 18px;
+	}
+
+	&__txt {
+		color: inherit;
+		margin-left: 0.5em;
+	}
+}
+
+.rate {
+	align-items: center;
+	background-color: $gray;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 8px;
+	width: 100%;
+
+	&__title {
+		@extend %text;
+	}
+
+	&__score {
+		@extend %text;
+		margin-left: 16px;
+	}
+
+	&__stars {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-left: 16px;
+		margin-right: -8px;
+	}
+
+	&__star {
+		display: block;
+		height: 20px;
+		margin-right: 8px;
+		object-position: center;
+		width: 20px;
+	}
+}
+
+.avatar {
+	border-radius: 50%;
+	height: 42px;
+	width: 42px;
+
+	&__img {
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+	}
+}
+
+.sender {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+
+	&__avatar {
+		width: 6%;
+	}
+
+	&__input {
+		@extend %text;
+		background: $white;
+		border: 1px solid $black;
+		border-radius: 4px;
+		color: $black;
+		display: block;
+		max-width: 64%;
+		opacity: 1;
+		padding: 8px 12px;
+		width: 68%;
+
+		&::placeholder {
+			opacity: 0.3;
+		}
+	}
+
+	&__submit {
+		width: 26%;
+	}
+}
+
+.reviews {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+@media screen and (max-width: 935px) {
+	.sender {
+		&__avatar {
+			width: 8%;
+		}
+
+		&__input {
+			width: 70%;
+		}
+
+		&__submit {
+			width: 22%;
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.sender {
+		&__avatar {
+			width: 15%;
+		}
+
+		&__input {
+			width: 50%;
+		}
+
+		&__submit {
+			width: 30%;
+		}
+	}
+
+	.rate {
+		&__score {
+			margin-left: 8px;
+		}
+
+		&__stars {
+			margin-left: 8px;
+			margin-right: -6px;
+		}
+
+		&__star {
+			height: 20px;
+			margin-right: 6px;
+			width: 20px;
+		}
+	}
+}
